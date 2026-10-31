@@ -84,6 +84,28 @@ body {
   filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.35));
 }
 
+.home-image-stage {
+  position: relative;
+  overflow: hidden;
+  width: min(100%, 480px);
+  margin: 0 auto 24px;
+}
+
+.home-image-stage::after {
+  position: absolute;
+  right: 0;
+  bottom: 4%;
+  left: 6%;
+  height: 2px;
+  background: #050505;
+  content: "";
+}
+
+.home-image-stage .home-image {
+  width: 100%;
+  margin: 0;
+}
+
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent-bright);
@@ -134,6 +156,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: 18px;
 }
 
 .home-tab {
@@ -155,6 +178,54 @@ h1 {
   border-color: var(--accent);
   background: linear-gradient(135deg, rgba(200, 155, 60, 0.3), rgba(12, 32, 54, 0.9));
   color: var(--ink);
+}
+
+.trophy-panel {
+  margin-top: 18px;
+  border: 1px solid rgba(200, 155, 60, 0.45);
+  border-radius: 14px;
+  background: rgba(7, 21, 38, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.trophy-heading {
+  padding: 14px 18px;
+  color: var(--accent-bright);
+  font-weight: 700;
+}
+
+.trophy-stage {
+  position: relative;
+  overflow: hidden;
+  height: 72px;
+  background:
+    linear-gradient(rgba(7, 21, 38, 0.45), rgba(7, 21, 38, 0.45)),
+    url("media/Gemini_Generated_Image_egxmivegxmivegxm-removebg-preview.png")
+      center / auto 150px no-repeat;
+  border-top: 1px solid rgba(200, 155, 60, 0.25);
+}
+
+.trophy-runner {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  gap: 34px;
+  width: max-content;
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  white-space: nowrap;
+  transform: translate(-100%, -50%);
+  animation: trophy-slide 22s linear infinite;
+}
+
+.trophy-runner span {
+  color: var(--accent-bright);
+  text-shadow: 0 0 12px rgba(240, 212, 119, 0.45);
+}
+
+@keyframes trophy-slide {
+  from { transform: translate(-100%, -50%); }
+  to { transform: translate(100vw, -50%); }
 }
 
 .page-shell {
