@@ -18,7 +18,10 @@ sind:
 den Ordner direkt auf Netlify. Beim direkten Öffnen über `file://` blockieren
 manche Browser lokale Audio-Dateien aus Sicherheitsgründen.
 
-Die Titel der Kreise kannst du direkt in [index.html](./index.html) ändern. Weitere Kreise lassen sich dort nach dem Muster eines bestehenden `article`-Elements ergänzen.
+Die Startseite liegt in [index.html](./index.html). Die Audio-Quest liegt als
+Unterseite in [birthday.html](./birthday.html); dort kannst du die Titel der
+Kreise ändern und weitere Kreise nach dem Muster eines bestehenden
+`article`-Elements ergänzen.
 
 Die Bilder und Videos liegen im Ordner `media`, die Audios im Ordner `audio`.
 
